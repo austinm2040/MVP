@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "live-server public/",
+    "server": "node backend/app.js",
     "build": "webpack --watch"
   },
   "repository": {
@@ -28,6 +29,10 @@
     "webpack-cli": "^4.7.2"
   },
   "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.17.1",
+    "mongoose": "^5.13.2",
+    "mysql": "^2.18.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   }
