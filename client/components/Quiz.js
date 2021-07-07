@@ -29,6 +29,7 @@ const Quiz = () => {
         <button onClick={handleClick.bind(null, 'B')}>{QuestionBank[currentQuestion].B}</button>
         <button onClick={handleClick.bind(null, 'C')}>{QuestionBank[currentQuestion].C}</button>
         <button onClick={handleClick.bind(null, 'D')}>{QuestionBank[currentQuestion].D}</button>
+        <button onClick={handleClick.bind(null, 'E')}>{QuestionBank[currentQuestion].E}</button>
       </div>
     </div>
   )

@@ -5,6 +5,7 @@ const QuestionBank = [
     B: 'Coconut',
     C: 'Freshly Baked Cookies',
     D: 'Pine Trees',
+    E: 'Vanilla',
     Weight: 1
   },
   {
@@ -13,6 +14,7 @@ const QuestionBank = [
     B: 'Summer',
     C: 'Fall',
     D: 'Winter',
+    E: 'I like them all!',
     Weight: .75
   },
   {
@@ -21,6 +23,7 @@ const QuestionBank = [
     B: 'Sushi',
     C: 'Yogurt',
     D: 'Mashed Potatoes',
+    E: 'Lambchop',
     Weight: .25
   }
 ];

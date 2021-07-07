@@ -7,7 +7,13 @@ const Result = () => {
 
   console.log('answers', answerTracker);
 
-  let categories = {'A': 'Old Fashioned', 'B': 'Gin & Tonic', 'C': 'Whiskey Neat', 'D': 'Cosmo', 'E': 'Beer'}
+  let categories = {
+    A: 'Adventurous',
+    B: 'Traditional',
+    C: 'Sensitive',
+    D: 'Thinker',
+    E: 'Leader'
+  }
 
   const getCocktail = () => {
     let max = 0;
@@ -52,7 +58,6 @@ const Result = () => {
 
   return (
     <div className='result'>
-      {/* <h1>You're an Old Fashioned!</h1> */}
       <h2>{getCocktail()}</h2>
       <button onClick={() => restart()}>RestartQuiz</button>
     </div>
