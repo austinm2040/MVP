@@ -1,13 +1,16 @@
 const express = require('express');
 const cors = require('cors');
 const db = require('./database.js');
+const path = require('path');
 
 const app = express();
 const port = process.env.PORT || 3000;
+const publicPath = path.join(__dirname, 'public');
 
 // middleware
 app.use(cors());
 app.use(express.json());
+app.use(express.static(publicPath));
 
 // routes
 app.get('/', (req, res) => {
