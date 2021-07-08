@@ -4,7 +4,7 @@ import QuestionBank from './QuestionBank.js';
 import axios from 'axios';
 
 const Result = () => {
-  const { answerTracker, setAnswerTracker, setQuizState } = useContext( QuizContext );
+  const { answerTracker, setAnswerTracker, setQuizState, results, setResults } = useContext( QuizContext );
   const [ cocktail, setCocktail ] = useState( {} );
 
   let categories = {
@@ -69,18 +69,36 @@ const Result = () => {
     .catch(err => console.log('GET error', err));
   };
 
+  const postResult = () => {
+    let cocktailResult = {
+      'category': cocktail.name
+    };
+    axios.post('http://localhost:3000/add', cocktailResult)
+    .catch(err => console.log('post error', err));
+  };
+
+  const getResults = () => {
+    axios.get('http://localhost:3000/results')
+    .then(response => {
+      setResults(response.data)
+    })
+    .catch(err => console.log('GET error', err));
+  };
+
   return (
     <div className='result'>
       {getCocktail()}
       <h2>{`You got ${cocktail.name}!`}</h2>
       <img alt={cocktail.name} src={cocktail.image} height='250px' width='375px' style={{'objectFit':'cover'}} />
       <p>{cocktail.description}</p>
-      <span>Click here to find out how to make your Cocktail!</span>
-      <span>
+      <a>Find out how to make your Cocktail!</a>
+      <div className='link'>
         <a href={cocktail.link}>{cocktail.name}</a>
-      </span>
+      </div>
       <br/>
-        <button onClick={() => restart()}>RestartQuiz</button>
+        <button onClick={() => restart()}>Restart Quiz</button>
+      <br/>
+      <button onClick={() => {postResult(); getResults(); setQuizState('compare')}}>Compare Your Results</button>
     </div>
   )
 };

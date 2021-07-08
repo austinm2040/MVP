@@ -38,7 +38,7 @@ app.post('/add', (req, res) => {
 });
 
 app.get('/results', (req, res) => {
-  db.query('SELECT * FROM results', (err, result) => {
+  db.query('SELECT category, COUNT(*) as "total results" FROM results GROUP BY category ORDER BY "total results" DESC', (err, result) => {
     if (err) {
       throw err;
     } else {

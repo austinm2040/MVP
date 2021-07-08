@@ -1,4 +1,170 @@
 .App {
+  height: 100vh;
   text-align: center;
+  font-family: Cormorant, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
+.start {
+  height: 500px;
+  width: 600px;
+  background-color: rgb(32, 154, 184);
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.quiz {
+  width: 1000px;
+  height: 1220px;
+  position: absolute;
+  left: 400px;
+  top: 100px;
+  z-index: 150;
+  background-color: rgb(32, 154, 184);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.quiz h1 {
+  color: rgb(255, 224, 50);
+}
+.quiz .choices {
+  color: rgb(56, 56, 56);
+  font-size: 28px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.quiz .choices img {
+  object-fit: fill;
+  border-radius: 16px;
+}
+.quiz .choices img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+.quiz .choices .imageA {
+  position: absolute;
+  left: 90px;
+  top: 100px;
+  z-index: 150;
+}
+.quiz .choices .A {
+  position: absolute;
+  left: 100px;
+  top: 370px;
+  z-index: 150;
+}
+.quiz .choices .imageB {
+  position: absolute;
+  left: 540px;
+  top: 100px;
+  z-index: 150;
+}
+.quiz .choices .B {
+  position: absolute;
+  left: 550px;
+  top: 370px;
+  z-index: 150;
+}
+.quiz .choices .imageC {
+  position: absolute;
+  left: 90px;
+  top: 470px;
+  z-index: 150;
+}
+.quiz .choices .C {
+  position: absolute;
+  left: 100px;
+  top: 740px;
+  z-index: 150;
+}
+.quiz .choices .imageD {
+  position: absolute;
+  left: 540px;
+  top: 470px;
+  z-index: 150;
+}
+.quiz .choices .D {
+  position: absolute;
+  left: 550px;
+  top: 740px;
+  z-index: 150;
+}
+.quiz .choices .imageE {
+  position: absolute;
+  left: 315px;
+  top: 830px;
+  z-index: 150;
+}
+.quiz .choices .E {
+  position: absolute;
+  left: 330px;
+  top: 1100px;
+  z-index: 150;
+}
+
+.result {
+  width: 500px;
+  height: 800px;
+  font-size: 22px;
+  font-family: Optima, Helvetica, sans-serif;
+  background-color: rgb(32, 154, 184);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.result a {
+  font-family: Courier New, Helvetica, sans-serif;
+  margin-bottom: 10px;
+}
+.result img {
+  border-radius: 16px;
+}
+.result .link {
+  font-family: Cormorant, Helvetica, sans-serif;
+  margin-bottom: 30px;
+}
+.result .link:hover {
+  font-family: Cormorant, Helvetica, sans-serif;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.compare {
+  width: 500px;
+  height: 1000px;
+  font-size: 20px;
+  font-family: Optima, Helvetica, sans-serif;
+  background-color: rgb(32, 154, 184);
+  border-radius: 10px;
+}
+
+button {
+  height: 50px;
+  width: 300px;
+  border: groove;
+  border-radius: 6px;
+  font-size: 20px;
+  margin-top: -40px;
+  margin-bottom: 20px;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
