@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "live-server public/",
-    "server": "node backend/app.js",
-    "build": "webpack --watch"
+    "start": "node backend/app.js",
+    "clientStart": "live-server public/",
+    "serverStart": "node backend/app.js"
+    // "build": "webpack --watch"
   },
   "repository": {
     "type": "git",
