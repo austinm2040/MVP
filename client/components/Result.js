@@ -15,7 +15,7 @@ const Result = () => {
     E: 'Leader'
   }
 
-  const getCocktail = () => {
+  const getCategory = () => {
     let max = 0;
     let maxAnswer = '';
     let secondMax = 0;
@@ -41,7 +41,7 @@ const Result = () => {
     if (answers[0] === answers[1]) {
       return categories[answers[0]];
     }
-    return categories[answers[0]] + ' & ' + categories[answers[1]];
+    return categories[answers[0]] + categories[answers[1]];
   };
 
   const restart = () => {
@@ -49,12 +49,21 @@ const Result = () => {
       A: 0,
       B: 0,
       C: 0,
-      D: 0
+      D: 0,
+      E: 0
     })
     setQuizState('start');
   };
 
   console.log('answers', answerTracker);
+
+  const getCocktail = () => {
+    axios.get('http://localhost:3000/cocktail')
+    .then(response => {
+      console.log(response);
+    })
+    .catch(err => console.log('GET error', err));
+  };
 
   return (
     <div className='result'>
