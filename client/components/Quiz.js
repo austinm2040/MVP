@@ -18,8 +18,9 @@ const Quiz = () => {
     }
   };
 
-  console.log('answerTracker', answerTracker);
-  console.log('question', currentQuestion);
+  const goBack = () => {
+    setCurrentQuestion(currentQuestion - 1);
+  };
 
   return (
     <div className='quiz'>
@@ -31,6 +32,9 @@ const Quiz = () => {
         <img alt={QuestionBank[currentQuestion].D} onClick={handleClick.bind(null, 'D')} src={QuestionBank[currentQuestion].dImage} height='250px' width='375px' style={{'objectFit':'cover'}} />{QuestionBank[currentQuestion].D}
         <img alt={QuestionBank[currentQuestion].E} onClick={handleClick.bind(null, 'E')} src={QuestionBank[currentQuestion].eImage} height='250px' width='375px' style={{'objectFit':'cover'}} />{QuestionBank[currentQuestion].E}
       </div>
+      {currentQuestion > 0 ? (
+        <button onClick={() => goBack()}>Back</button>
+      ) : ('') }
     </div>
   )
 };

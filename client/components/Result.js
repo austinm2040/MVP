@@ -1,11 +1,11 @@
-import React, { useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import QuizContext from './Context.js';
 import QuestionBank from './QuestionBank.js';
+import axios from 'axios';
 
 const Result = () => {
   const { answerTracker, setAnswerTracker, setQuizState } = useContext( QuizContext );
-
-  console.log('answers', answerTracker);
+  const [ cocktail, setCocktail ] = useState( {} );
 
   let categories = {
     A: 'Adventurous',
@@ -55,20 +55,32 @@ const Result = () => {
     setQuizState('start');
   };
 
-  console.log('answers', answerTracker);
-
   const getCocktail = () => {
+    let result = getCategory();
+
     axios.get('http://localhost:3000/cocktail')
     .then(response => {
-      console.log(response);
+      response.data.map(cocktail => {
+        if (result === cocktail.category1 || result === cocktail.category2) {
+          setCocktail(cocktail)
+        }
+      })
     })
     .catch(err => console.log('GET error', err));
   };
 
   return (
     <div className='result'>
-      <h2>{getCocktail()}</h2>
-      <button onClick={() => restart()}>RestartQuiz</button>
+      {getCocktail()}
+      <h2>{`You got ${cocktail.name}!`}</h2>
+      <img alt={cocktail.name} src={cocktail.image} height='250px' width='375px' style={{'objectFit':'cover'}} />
+      <p>{cocktail.description}</p>
+      <span>Click here to find out how to make your Cocktail!</span>
+      <span>
+        <a href={cocktail.link}>{cocktail.name}</a>
+      </span>
+      <br/>
+        <button onClick={() => restart()}>RestartQuiz</button>
     </div>
   )
 };
