@@ -5,9 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node backend/app.js",
-    "clientStart": "live-server public/",
-    "serverStart": "node backend/app.js"
-    // "build": "webpack --watch"
+    "clientStart": "live-server public/"
   },
   "repository": {
     "type": "git",
