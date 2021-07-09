@@ -8,12 +8,13 @@ const mysql = require('mysql');
 // });
 
 const db = mysql.createConnection({
-  user: 'b54f636b272175',
+  user: 'b5feb92071e84a',
   host: 'us-cdbr-east-04.cleardb.com',
-  password: '831cd4e8',
-  database: 'heroku_85fb4b54a8cbe4c'
+  password: '1005af49',
+  database: 'heroku_aab4e6bf0da38d5'
 });
+
 
 module.exports = db;
 
-// mysql://b54f636b272175:831cd4e8@us-cdbr-east-04.cleardb.com/heroku_85fb4b54a8cbe4c?reconnect=true
+// mysql://b5feb92071e84a:1005af49@us-cdbr-east-04.cleardb.com/heroku_aab4e6bf0da38d5?reconnect=true
