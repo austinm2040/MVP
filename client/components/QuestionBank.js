@@ -70,7 +70,7 @@ const QuestionBank = [
     Weight: 1
   },
   {
-    Question: 'How do you spend you days off?',
+    Question: 'How do you spend your days off?',
     A: 'Exploring the city',
     aImage: '../images/Question6/sunset-nyc.jpg',
     B: 'Relaxing in the park',
@@ -112,7 +112,7 @@ const QuestionBank = [
     Weight: .50
   },
   {
-    Question: 'What your go-to karaoke song?',
+    Question: 'What is your go-to karaoke song?',
     A: 'Can\'t Feel My Face, The Weeknd',
     aImage: '../images/Question9/the-weeknd.jpg',
     B: 'Sweet Caroline, Neil Diamond',

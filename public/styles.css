@@ -1,6 +1,7 @@
 .App {
   height: 100vh;
   text-align: center;
+  margin-top: 40px;
   font-family: Cormorant, Helvetica, sans-serif;
   display: flex;
   justify-content: center;
@@ -146,12 +147,16 @@
 }
 
 .compare {
+  height: 1200px;
   width: 500px;
-  height: 1000px;
   font-size: 20px;
   font-family: Optima, Helvetica, sans-serif;
   background-color: rgb(32, 154, 184);
   border-radius: 10px;
+}
+
+.compare button {
+  margin-bottom: 36px;
 }
 
 button {

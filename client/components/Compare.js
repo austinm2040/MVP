@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect } from 'react';
 import QuizContext from './Context.js';
 
 const Compare = () => {
-  const { setQuizState, results } = useContext( QuizContext );
+  const { setQuizState, results, setAnswerTracker } = useContext( QuizContext );
 
   // useEffect(() => {
   //   if (results) {
@@ -43,11 +43,24 @@ const Compare = () => {
     }
   };
 
+  const restart = () => {
+    setAnswerTracker({
+      A: 0,
+      B: 0,
+      C: 0,
+      D: 0,
+      E: 0
+    })
+    setQuizState('start');
+  };
+
   return (
     <div className='compare'>
       {showResults()}
       <br/>
-        <button onClick={() => setQuizState('start')}>Restart Quiz</button>
+      <button onClick={() => setQuizState('result')}>Back to Results</button>
+      <br/>
+        <button onClick={() => restart()}>Restart Quiz</button>
     </div>
   )
 };
