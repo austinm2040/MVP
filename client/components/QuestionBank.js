@@ -11,7 +11,7 @@ const QuestionBank = [
     dImage: '../images/Question1/coconut.jpg',
     E: 'Freshly Baked Cookies',
     eImage: '../images/Question1/cookies.jpg',
-    Weight: .75
+    Weight: .50
   },
   {
     Question: 'What is your favorite season?',
@@ -25,7 +25,7 @@ const QuestionBank = [
     dImage: '../images/Question2/autumn.jpg',
     E: 'I like them all!',
     eImage: '../images/Question2/jumping-I-like-all-seasons.jpg',
-    Weight: .75
+    Weight: .50
   },
   {
     Question: 'What your favorite food?',
@@ -95,7 +95,7 @@ const QuestionBank = [
     dImage: '../images/Question7/cosmos.jpg',
     E: 'Law & Order: SVU',
     eImage: '../images/Question7/ice-t-law-and-order.jpg',
-    Weight: .75
+    Weight: .50
   },
   {
     Question: 'What is your dream vacation?',
@@ -123,7 +123,7 @@ const QuestionBank = [
     dImage: '../images/Question9/flaming-lips.jpg',
     E: 'Love is a Battlefield, Pat Benatar',
     eImage: '../images/Question9/pat-benatar.jpg',
-    Weight: .75
+    Weight: .50
   },
   {
     Question: 'Which book gives you the most joy?',

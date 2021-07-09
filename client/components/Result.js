@@ -58,8 +58,8 @@ const Result = () => {
   const getCocktail = () => {
     let result = getCategory();
 
-    axios.get('http://localhost:3000/cocktail')
-    // axios.get('https://cocktail-quiz.herokuapp.com/cocktail')
+    // axios.get('http://localhost:3000/cocktail')
+    axios.get('https://cocktail-quiz.herokuapp.com/cocktail')
     .then(response => {
       response.data.map(cocktail => {
         if (result === cocktail.category1 || result === cocktail.category2) {
@@ -74,14 +74,14 @@ const Result = () => {
     let cocktailResult = {
       'category': cocktail.name
     };
-    axios.post('http://localhost:3000/add', cocktailResult)
-    // axios.post('https://cocktail-quiz.herokuapp.com/add', cocktailResult)
+    // axios.post('http://localhost:3000/add', cocktailResult)
+    axios.post('https://cocktail-quiz.herokuapp.com/add', cocktailResult)
     .catch(err => console.log('post error', err));
   };
 
   const getResults = () => {
-    axios.get('http://localhost:3000/results')
-    // axios.get('https://cocktail-quiz.herokuapp.com/results')
+    // axios.get('http://localhost:3000/results')
+    axios.get('https://cocktail-quiz.herokuapp.com/results')
     .then(response => {
       setResults(response.data)
     })
