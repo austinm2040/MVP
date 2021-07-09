@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node backend/app.js",
     "clientStart": "live-server public/",
-    "build": "webpack --watch"
+    "webpackBuild": "webpack --watch"
   },
   "repository": {
     "type": "git",
