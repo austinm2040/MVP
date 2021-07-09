@@ -99,9 +99,9 @@ const Result = () => {
         <a href={cocktail.link}>{cocktail.name}</a>
       </div>
       <br/>
-        <button onClick={() => restart()}>Restart Quiz</button>
-      <br/>
       <button onClick={() => {postResult(); getResults(); setQuizState('compare')}}>Compare Your Results</button>
+      <br/>
+      <button onClick={() => restart()}>Restart Quiz</button>
     </div>
   )
 };

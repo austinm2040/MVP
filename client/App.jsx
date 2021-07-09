@@ -17,7 +17,7 @@ const App = () => {
   const [ results, setResults ] = useState( );
 
   return (
-    <div className="App">
+    <div className='App'>
       <h1>{quizState === 'start' || quizState === 'compare' ? ('Which Cocktail Are You?'): ''}</h1>
       <QuizContext.Provider value={{ quizState, setQuizState, answerTracker, setAnswerTracker, results, setResults }}>
         {quizState === 'start' && <Start />}
